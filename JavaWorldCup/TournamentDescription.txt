@@ -1,4 +1,0 @@
-Describe your tournament design here. Please don't write more than 250 words.
-
-The system is entirely simple. 8 teams are chosen at random and then two teams next to each other by
-index number are pitted against each other based on coin toss. The loser is kicked from the roster until there is only one team left.
