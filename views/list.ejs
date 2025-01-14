@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=shopData.shopName%> List</title>
+    <link rel="stylesheet"  type="text/css" href="/main.css" />
+</head>
+<body>
+    <h1>Available Fireworks</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Color</th>
+                <th>Effect</th>
+                <th>Price</th>
+                <th>Manufacturer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% availableFireworks.forEach(function(firework) { %>
+                <tr>
+                    <td><%= firework.name %></td>
+                    <td><%= firework.type %></td>
+                    <td><%= firework.color %></td>
+                    <td><%= firework.effect %></td>
+                    <td>£<%= firework.price %></td>
+                    <td><%= firework.manufacturer_name %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    <p><a href="/index">Back to home</a></p>
+</body>
+</html>

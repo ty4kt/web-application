@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manufacturers List</title>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h2>Our Manufacturers</h2>
+            
+            <% if (manufacturers.length > 0) { %>
+                <table class="manufacturers-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Location</th>
+                            <th>Contact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% manufacturers.forEach(function(manufacturer) { %>
+                            <tr>
+                                <td><%= manufacturer.name %></td>
+                                <td><%= manufacturer.location || 'Not specified' %></td>
+                                <td><%= manufacturer.contact || 'Not specified' %></td>
+                            </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+            <% } else { %>
+                <p>No manufacturers found in the database.</p>
+            <% } %>
+        </div>
+        <p><a href="/index">Back to home</a></p>
+    </main>
+</body>
+</html> 
